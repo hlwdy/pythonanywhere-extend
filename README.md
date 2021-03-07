@@ -7,3 +7,5 @@
 1. usname: 用户名 
 2. password: 密码
 3. url: 你的网站url，例如 xxx.pythonanywhere.com
+
+按照指定格式填写，即可正常运行。

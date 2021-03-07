@@ -21,7 +21,7 @@ jobs:
       run: python -m pip install --upgrade requests
     - name: 'Extend'
       env:
-        usname: ${{ secrets.usname }}
-        password: ${{ secrets.password }}
-        url: ${{ secrets.url }}
+        USNAME: ${{ secrets.USNAME }}
+        PASSWORD: ${{ secrets.PASSWORD }}
+        URL: ${{ secrets.URL }}
       run: python main.py

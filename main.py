@@ -5,9 +5,9 @@ if('usname' not in os.environ):
     print('no secret')
     exit()
 
-usname=os.environ["usname"]
-password=os.environ["password"]
-url=os.environ["url"]
+usname=os.environ["USNAME"]
+password=os.environ["PASSWORD"]
+url=os.environ["URL"]
 
 headers = {
     'Referer': 'https://www.pythonanywhere.com/login/',

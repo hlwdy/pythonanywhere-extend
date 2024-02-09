@@ -5,16 +5,16 @@ on:
     branches:
       - master
   schedule:
-    - cron: '0 6 1 * *'
+    - cron: '0 6 1,17 * *'
 
 jobs:
   netease:
     runs-on: ubuntu-latest
     steps:
     - name: 'Checkout codes'
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
     - name: 'Set python'
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v4
       with:
         python-version: '3.x'
     - name: 'Install dependencies'

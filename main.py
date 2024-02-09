@@ -30,9 +30,10 @@ data = {
     'login_view-current_step': 'auth',
 }
 r=s.post('https://www.pythonanywhere.com/login/',headers=headers,data=data)
+#print(r.text)
 
 r=s.get('https://www.pythonanywhere.com/user/'+usname+'/webapps/#tab_id_'+url.replace('.','_'),headers=headers)
-csrf_token=re.findall("name='csrfmiddlewaretoken' value='(.*?)' />",r.text)[0]
+csrf_token=re.findall('Anywhere.csrfToken = "(.*?)";',r.text)[0]
 print(csrf_token)
 
 data = {
@@ -40,4 +41,4 @@ data = {
 }
 headers['Referer']='https://www.pythonanywhere.com/user/'+usname+'/webapps/'
 r=s.post('https://www.pythonanywhere.com/user/'+usname+'/webapps/'+url+'/extend',headers=headers,data=data)
-print(r.text)
+print(r.status_code)

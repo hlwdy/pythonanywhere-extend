@@ -1,7 +1,7 @@
 import requests,json
 import re,os
 
-if('usname' not in os.environ):
+if('USNAME' not in os.environ):
     print('no secret')
     exit()
 
